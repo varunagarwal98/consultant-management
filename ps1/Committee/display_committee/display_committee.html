@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Committee Bank/Display Committee</title>
+<head lang = "en">
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+</head>
+<body>
+
+<h4>Input</h4>
+
+<form action = "display_committee.php" method = "post" id = "committee_form_display">
+
+Committee ID: <input type = "number" name = "com_id"><br>
+Committee Type: <select name = "com_type" required> 
+					<option value = ""></option>
+					<option value = "Standing">Standing Committee</option>
+					<option value = "Regular">Regular Committee</option>
+				</select><br>
+
+Committee Category: <select name = "com_category" required> 
+						<option value = ""></option>
+						<option value = "ADC">ADVISORY COMMITTEE</option>
+						<option value = "IMC">INTERNAL MANAGEMENT</option>
+						<option value = "LC">LICENSING COMMITTEE</option>
+						<option value = "PSDR">PROJECT SAFETY DESIGN / DESIGN REVIEW COMMITTEE</option>
+						<option value = "SC">SAFETY COMMITTEE</option>
+						<option value = "SEC">SELECTION COMMITTEE</option>
+						<option value = "SIEC">SITE EVALUATION COMMITTEE</option>
+						<option value = "SPC">SPECIALISTS GROUP</option>
+						<option value = "SRC">SAFETY REVIEW COMMITTEE</option>
+						<option value = "STC">STANDING COMMITTEE</option>
+						<option value = "TARC">TECHNICAL ASSESSMENT	AND REVIEW COMMITTEE</option>
+						<option value = "TFC">TASK FORCE</option>
+						<option value = "WGC">WORKING GROUP</option>
+						<option value = "EXG">EXPERTS GROUP</option>
+					</select><br>
+
+Committee Abbreviation: <input type = "text" name = "com_abb"><br>
+Committee SPOC: <input type = "number" name = "com_spoc"><br>
+Committee Status: <select name = "com_status">
+						<option value = "">New</option>
+						<option value = "AC">Active</option>
+						<option value = "IN">Inactive</option>
+					</select><br>
+
+Comm. Processing Status: <br><br>
+
+<input type = "submit">
+
+</form>
+</body>
+</html>
+

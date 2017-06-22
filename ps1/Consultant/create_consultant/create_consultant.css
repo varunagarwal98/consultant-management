@@ -1,0 +1,34 @@
+table, th, td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+table{
+	width: 100%;
+}
+th{
+	text-align: center;
+	height: 40px;
+}
+td{
+	height: 20px;
+}
+#ai{
+	height: 50px;
+	width: 100%;
+}
+#cell{
+	width: 99%;
+}
+#present_engagement_details{
+	border: 0px;
+}
+#col1{
+	text-align: right;
+	width: 40%
+}
+#col2{
+	text-align: left;
+}
+.affix{
+	top: 100px;
+}
