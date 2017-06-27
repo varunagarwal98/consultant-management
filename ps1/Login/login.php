@@ -18,8 +18,8 @@ if ($conn->connect_error) {
 }
 if (isset($_POST['coord_id']) && isset($_POST['pass']))
 {
-	$coord_id = $_POST['coord_id'];
-	$password = $_POST['pass'];
+	$coord_id = mysql_real_escape_string(trim($_POST['coord_id']));
+	$password = mysql_real_escape_string(trim($_POST['pass']));
 }
 
 $sql = "SELECT coord_id, password from coord_db where coord_id = ".$coord_id." and password = '".$password."'";
@@ -30,13 +30,13 @@ $row_cnt = mysqli_num_rows($result);
 
 if ($row_cnt == 0)
 {
-	$_SESSION['errMsg'] = "Your username or password was incorrect.";
-	header('Location: login.html');	
+	$_SESSION['errMsg'] = "Error";
+	header('Location: login_page.php');	
 }
 else
 {
 	$_SESSION['coord_id'] = $coord_id;
-	header('Location: ../Consultant/create_consultant/form_consultant.php');
+	header('Location: ../Consultant/create_consultant/consultant_create.php');
 }
 ?>
 
