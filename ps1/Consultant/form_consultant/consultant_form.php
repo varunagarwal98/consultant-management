@@ -28,8 +28,8 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="../create_consultant/consultant_create.php">Create Consultant</a></li>
 						<li><a class="dropdown-item" href="../display_consultant/consultant_display.php">Display Consultant</a></li>
-						<li class="active"><a class="dropdown-item" href="../manage_consultant/manage_cnslt_page.php">Manage Consultant</a></li>
-						<li><a class="dropdown-item" href="../form_consultant/consultant_form.php">Form 1A</a></li>
+						<li><a class="dropdown-item" href="../manage_consultant/manage_cnslt_page.php">Manage Consultant</a></li>
+						<li class="active"><a class="dropdown-item" href="../form_consultant/consultant_form.php">Form 1A</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -45,6 +45,14 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 		<div class="col-md-10">
 			<div class="page-header">
 				<h2>Consultant Form 1A</h2>
+			</div>
+			<div class="row">
+				Consultant ID *: <input type="number" name="cnslt_id" required> <input type="button" value="Get Details" onclick="get_details()">
+			</div>
+			<div class="row"><br></div>
+			<div class="row">
+				<input type="button" value="Download Form 1A" onclick="down_form()">
+				<input type="button" value="Upload Form 1A" onclick="up_form()">
 			</div>
 		</div>
 	</div>
