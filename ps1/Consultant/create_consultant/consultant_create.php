@@ -2,7 +2,7 @@
 
 session_start();
 if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
-	header('Location: ../../Login/login.html');
+	header('Location: ../../Login/login_page.php');
 ?>
 
 <!DOCTYPE html>
