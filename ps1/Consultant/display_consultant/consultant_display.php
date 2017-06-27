@@ -95,7 +95,6 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			</div>
 			<div class="row">
 				<br><h4>Consultant Data</h4>
-				<!-- <?php include 'display_consultant.php' ?>  -->
 				<div> <table id = "consultant_table"></table></div>
 			</div>
 		</div>
