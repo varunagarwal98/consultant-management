@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php 
+
+session_start();
+if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
+	header('Location: ../../Login/login.html');
+?>
+
 <!DOCTYPE html>
 <html>
 <title>Manage Consultant</title>
@@ -34,10 +40,10 @@
 				<li class="dropdown">
 					<a class="nav-link dropdown-toggle" class="active" data-toggle="dropdown" href="../create_consultant/form_consultant.php">Consultant<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a class="dropdown-item" href="../create_consultant/form_consultant.php">Create Consultant</a></li>
-						<li><a class="dropdown-item" href="../display_consultant/display_consultant.html">Display Consultant</a></li>
+						<li><a class="dropdown-item" href="../create_consultant/consultant_create.php">Create Consultant</a></li>
+						<li><a class="dropdown-item" href="../display_consultant/consultant_display.php">Display Consultant</a></li>
 						<li class="active"><a class="dropdown-item" href="../manage_consultant/manage_cnslt_page.php">Manage Consultant</a></li>
-						<li><a class="dropdown-item" href="../form_consultant/form_consultant.html">Form 1A</a></li>
+						<li><a class="dropdown-item" href="../form_consultant/consultant_form.php">Form 1A</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
