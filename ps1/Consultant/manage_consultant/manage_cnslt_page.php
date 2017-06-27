@@ -2,7 +2,7 @@
 
 session_start();
 if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
-	header('Location: ../../Login/login.html');
+	header('Location: ../../Login/login_page.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<link rel = "stylesheet" href = "manage_consultant.css">
-  	<script src = manage_consultant.js></script>
+  	<script src = manage_consultant2.js></script>
   	<script src="http://code.jquery.com/jquery-1.5.js"></script>
   	<script> 
   	$(document).ready(function(){
@@ -59,7 +59,6 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 		<div class="col-md-10">
 			<div class="page-header">
 				<h2>Manage Consultant</h2>
-				<form action = "update_cnslt.php" method = "post" id = "consultant_form_manage">
 			</div>
 			<div class="row">
 				<h4>Enter Consultant No</h4>
@@ -72,7 +71,11 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			<div class="row">
 				<br><h4>Manage Details</h4>
 			</div>
-			
+			<form action = "update_cnslt.php" method = "post" id = "consultant_form_manage">
+			<div class="row">
+				<div class="col-md-2">Consultant: </div>
+				<div class="col-md-3"><input type = "number" name = "cnslt_id" id="cnslt_id_2" readonly></div>
+			</div>
 			<div class="row">
 				<div class="col-md-2">Co-ordinator: </div>
 				<div class="col-md-3"><input type = "number" name = "coord_id" id="coord"></div>
