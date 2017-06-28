@@ -30,11 +30,11 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 	    $fileName = addslashes($fileName);
 	}
 
-	$query = "INSERT INTO cnslt_bnk (form_1a) VALUES ('$fileName', '$content')";
+	$query = "INSERT INTO cnslt_bnk (file_name, form_1a) VALUES ('$fileName', '$content')";
+
+	//echo $query;
 
 	mysql_query($query) or die('Error, query failed');
-	
 	echo "<br>File $fileName uploaded<br>";
 }
-
 ?>
