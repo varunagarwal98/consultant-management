@@ -15,6 +15,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<link rel = "stylesheet" href = "form_consultant.css">
+  	<script type="text/javascript" src="consultant_form.js"></script>
   	
 </head>
 <body>
@@ -47,12 +48,19 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 				<h2>Consultant Form 1A</h2>
 			</div>
 			<div class="row">
-				Consultant ID *: <input type="number" name="cnslt_id" required> <input type="button" value="Get Details" onclick="get_details()">
+			<form action="down_form2.php" method="post">
+				Consultant ID *: <input type="number" name="cnslt_id" id="cnslt_id"> <input type="button" value="Go" onclick="go()">  <input type="button" value="Download Form 1A" onclick="window.location.href='down_form2.php'" id="download" disabled>
 			</div>
 			<div class="row"><br></div>
 			<div class="row">
-				<input type="button" value="Download Form 1A" onclick="down_form()">
-				<input type="button" value="Upload Form 1A" onclick="up_form()">
+				<form method="post" enctype="multipart/form-data" action="up_form.php">
+				<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+				<input name="userfile" type="file" id="userfile" disabled>
+				<input name="upload" type="submit" id="upload" value="Upload Form 1A" disabled>
+			</div>
+			<div class="row">
+				<br><br>
+				<table id="det"></table>
 			</div>
 		</div>
 	</div>
