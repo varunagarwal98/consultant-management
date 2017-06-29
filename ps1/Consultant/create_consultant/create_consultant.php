@@ -1,23 +1,6 @@
-<?php session_start()?>
-
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php 
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "consultant";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-//Check connection
-if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
-}
+include '../connect.php';
 
 $coord_id = $_SESSION['coord_id'];
 
@@ -211,8 +194,4 @@ for ($i = 0; $i < count($field); $i++)
 	if (!$stmt3->execute())
 		echo "failed";
 }
-
 ?>
-
-</body>
-</html>

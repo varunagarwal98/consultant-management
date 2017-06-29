@@ -1,17 +1,4 @@
-<?php session_start(); 
-
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "consultant";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-//Check connection
-if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
-}
+<?php include '../connect.php';
 
 $q = $_GET['q'];
 
@@ -34,7 +21,5 @@ if ($result = mysqli_query($conn,$sql))
 		//echo "s";
 	}
 }	
-else
-	echo "failure";
 
 ?>

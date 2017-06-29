@@ -1,21 +1,8 @@
-<?php session_start() ?>
-
 <?php 
 
 $q = mysql_real_escape_string(trim($_GET['q']));
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "consultant";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-//Check connection
-if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
-}
+include '../connect.php';
 
 $_SESSION['cnslt_id'] = mysql_real_escape_string(trim($q));
 

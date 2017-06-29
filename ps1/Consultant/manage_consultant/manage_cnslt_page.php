@@ -17,6 +17,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
   	<link rel = "stylesheet" href = "manage_consultant.css">
   	<script src = manage_consultant2.js></script>
   	<script src="http://code.jquery.com/jquery-1.5.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../create_consultant/create_consultant.css">
   	<script> 
   	$(document).ready(function(){
 	   var $form = $('form');
@@ -101,9 +102,18 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 				<div class="col-md-2">Payment Status:</div>
 				<div class="col-md-3" ><input type="text" id="payment" value="Undefined" readonly></div>
 			</div>
-		<br>
-		<input type = "submit" value="Update" id="submit">
-		</form>
+			<br>
+			<input type = "submit" value="Update" id="submit">
+			</form>
+			<br>			
+			<a onclick="show_more()" id="toggle">See More</a>
+
+			<div id="show_more" hidden>
+				<form action="update_cnslt2.php" method="post">
+				<?php include '../consultant_fields.php';?>
+				<input type="submit" id="more_submit" disabled>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>

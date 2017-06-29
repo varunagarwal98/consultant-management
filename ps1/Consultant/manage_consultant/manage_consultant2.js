@@ -52,3 +52,21 @@ function cnslt_details(curr_coord)
     xmlhttp.open("GET","check_consultant.php?q="+cnslt_id,true);
     xmlhttp.send();	
 };
+
+var status = "less";
+
+function show_more()
+{
+	if (status == "less")
+	{
+		document.getElementById("show_more").hidden = false;
+		document.getElementById("toggle").innerText = "Show Less";
+		status = "more";
+	}
+	else if (status == "more")
+	{
+		document.getElementById("show_more").hidden = true;
+		document.getElementById("toggle").innerText = "Show More";
+		status = "less";
+	}
+};

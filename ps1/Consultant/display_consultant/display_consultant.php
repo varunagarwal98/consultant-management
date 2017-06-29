@@ -1,25 +1,8 @@
-<?php session_start() ?>
-
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php 
 
 $q = mysql_real_escape_string(trim($_GET['q']));
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "consultant";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-//Check connection
-if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
-}
+include '../connect.php';
 
 $sql = "select f_name, l_name, cnslt_type, email_1, coord_id, cnslt_id, proc_status, cnslt_stat
 		from cnslt_bnk " . $q;
@@ -61,6 +44,3 @@ else
 	echo "ERROR: Could not execute $sql.";
 
 ?>
-
-</body>
-</html>
