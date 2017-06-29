@@ -1,17 +1,6 @@
-<?php
+<?php include '../connect.php';
 
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "consultant";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-//Check connection
-if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
-}
+$cnslt_id = $_SESSION['cnslt_id'];
 
 if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 {
@@ -30,11 +19,9 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 	    $fileName = addslashes($fileName);
 	}
 
-	$query = "INSERT INTO cnslt_bnk (file_name, form_1a) VALUES ('$fileName', '$content')";
+	$query = "UPDATE cnslt_bnk SET file_name = '$fileName', form_1a = '$content', file_type = '$fileType', file_size = $fileSize where cnslt_id = $cnslt_id";
 
-	//echo $query;
-
-	mysql_query($query) or die('Error, query failed');
+	mysqli_query($conn, $query) or die('Error, query failed');
 	echo "<br>File $fileName uploaded<br>";
 }
 ?>
