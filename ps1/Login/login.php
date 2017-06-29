@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html>
-<body>
+<?php include '../Consultant/connect.php'; 
 
-<?php 
-session_start();
-$servername = "localhost";
-$username = "root";
-$password = "root";
-$db = "consultant";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-//Check connection
-if ($conn->connect_error) {
-   die("Connection failed: " . $conn->connect_error);
-}
 if (isset($_POST['coord_id']) && isset($_POST['pass']))
 {
 	$coord_id = mysql_real_escape_string(trim($_POST['coord_id']));
