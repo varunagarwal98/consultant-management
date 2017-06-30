@@ -10,7 +10,7 @@
 		<div class = "row">
 			<div class="col-md-4">Title: *</div>
 			<div class="col-md-4">
-					<select name = "title" required>
+					<select name = "title" required id="title">
 						<option value =""></option>
 						<option value = "Dr.">Dr.</option>
 						<option value = "M/s">M/s</option>

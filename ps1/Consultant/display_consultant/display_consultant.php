@@ -42,5 +42,4 @@ if($result = mysqli_query($conn, $sql))
 }
 else
 	echo "ERROR: Could not execute $sql.";
-
 ?>

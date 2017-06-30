@@ -71,4 +71,3 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 
 </body>
 </html>
-

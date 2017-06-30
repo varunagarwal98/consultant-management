@@ -21,7 +21,5 @@ function go()
 	
 	var cnslt_id = document.getElementById('cnslt_id').value;
 	xmlhttp.open("GET","go.php?q="+cnslt_id,true);
-    xmlhttp.send();
-
-    
+    xmlhttp.send();  
 };

@@ -1,5 +1,3 @@
-//<script type = "text/javascript">
-
 function add_row (tableid, a, b)
 {
 	var table = document.getElementById(tableid);

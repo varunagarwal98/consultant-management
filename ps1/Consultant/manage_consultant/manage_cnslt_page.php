@@ -18,18 +18,22 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
   	<script src = manage_consultant2.js></script>
   	<script src="http://code.jquery.com/jquery-1.5.js"></script>
   	<link rel="stylesheet" type="text/css" href="../create_consultant/create_consultant.css">
-  	<script> 
+  	<script type="text/javascript" src="../create_consultant/create_consultant.js"></script>
+  	<!-- <script> 
   	$(document).ready(function(){
 	   var $form = $('form');
 	   $form.submit(function(){
 	      $.post($(this).attr('action'), $(this).serialize(), function(response){
 	         
 	      },'json');
-	      alert("Consultant Updated");
+	      if (document.getElementById ("cnslt_id") == "")
+	      	alert ("Enter Details!");
+	      else
+	      	alert("Consultant Updated");
 	      return false;
 	   });
 	});
-	</script>
+	</script> -->
 
 </head>
 <body>
@@ -72,6 +76,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			<div class="row">
 				<br><h4>Manage Details</h4>
 			</div>
+			<div id="small_form">
 			<form action = "update_cnslt.php" method = "post" id = "consultant_form_manage">
 			<div class="row">
 				<div class="col-md-2">Consultant: </div>
@@ -79,11 +84,11 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			</div>
 			<div class="row">
 				<div class="col-md-2">Co-ordinator: </div>
-				<div class="col-md-3"><input type = "number" name = "coord_id" id="coord"></div>
+				<div class="col-md-3"><input type = "number" name = "coord_id" id="coord" readonly></div>
 			</div>
 			<div class="row">
 				<div class="col-md-2">Consultant Type: </div>
-				<div class="col-md-3"><select name = "cnslt_type" id="con_type">
+				<div class="col-md-3"><select name = "cnslt_type" id="con_type" readonly>
 								<option value = ""></option>
 								<option value = "SP">Specialist</option>
 								<option value = "EX">Expert</option>
@@ -92,7 +97,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			</div>
 			<div class="row">
 				<div class="col-md-2">Consultant Status: </div>
-				<div class="col-md-3"><select name = "cnslt_status" id="con_stat">
+				<div class="col-md-3"><select name = "cnslt_status" id="con_stat" readonly>
 									<option value = "">Undefined</option>
 									<option value = "A">Active</option>
 									<option value = "I">Inactive</option>
@@ -103,15 +108,19 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 				<div class="col-md-3" ><input type="text" id="payment" value="Undefined" readonly></div>
 			</div>
 			<br>
-			<input type = "submit" value="Update" id="submit">
+			<input type = "submit" value="Update" id="submit" disabled>
 			</form>
+			</div>
 			<br>			
 			<a onclick="show_more()" id="toggle">See More</a>
 
-			<div id="show_more" hidden>
+			<div id="show_more" hidden><br>
 				<form action="update_cnslt2.php" method="post">
+				<div class="row">
+					<h4>Consultant ID: <input type="number" id="cnslt_id_3" name="cnslt_id_4" readonly></h4>
+				</div>
 				<?php include '../consultant_fields.php';?>
-				<input type="submit" id="more_submit" disabled>
+				<input type="submit" id="more_submit" value="Update" disabled>
 				</form>
 			</div>
 		</div>
