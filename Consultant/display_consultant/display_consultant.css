@@ -1,0 +1,13 @@
+.affix{
+	top: 100px;
+}
+table, th
+{
+	border: 2px solid black;
+	text-align: center;
+	padding: 10px;
+}
+td
+{
+	border: 1px solid black;
+}
