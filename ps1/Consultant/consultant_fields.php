@@ -286,7 +286,7 @@
 		</div>
 		<div class="row">
 			<input type = "button" value = "Add" onclick = "add_row('prq', 'qlf', 'exp')">
-			<input type = "button" value = "Delete" onclick = "del_row('prq', 'qlf', 'exp')"><br><br>
+			<input type = "button" value = "Delete" onclick = "del_row('prq')"><br><br>
 		</div>	
 	</div>
 	<div class="col-md-1"></div>
@@ -308,7 +308,7 @@
 		</div>
 		<div class="row">
 			<input type = "button" value = "Add" onclick = "add_row('f', 'field', 'f_dur')">
-			<input type = "button" value = "Delete" onclick = "del_row('f', 'field', 'f_dur')">
+			<input type = "button" value = "Delete" onclick = "del_row('f')">
 		</div>
 	</div>
 </div>
@@ -330,7 +330,7 @@
 		</div>
 		<div class="row">
 		<input type = "button" value = "Add" onclick = "add_row('assg', 'assgn', 'dur')">
-		<input type = "button" value = "Delete" onclick = "del_row('assg', 'assgn', 'dur')">
+		<input type = "button" value = "Delete" onclick = "del_row('assg')">
 		</div>
 	</div>
 	<div class="col-md-1"></div>
