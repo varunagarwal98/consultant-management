@@ -12,11 +12,4 @@ if ($result = mysqli_query($conn,$sql))
 		echo json_encode($row);
 	}
 }
-
-$sql = "select * from sp_assgn where cnslt_id = $q";
-
-$sql = "select * from f_exp where cnslt_id = $q";
-
-$sql = "select * from prof_q where cnslt_id = $q";
-
 ?>

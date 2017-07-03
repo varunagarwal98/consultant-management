@@ -16,7 +16,7 @@ function add_row (tableid, a, b)
 	t2.name = b + '[' + rowno + ']';
 	t2.id = "cell";
 	cell2.appendChild(t2);
-}
+};
 
 function del_row (tableid)
 {
@@ -24,4 +24,4 @@ function del_row (tableid)
 	if (rowno == 2)
 		return;
 	document.getElementById(tableid).deleteRow(rowno-1);
-}
+};

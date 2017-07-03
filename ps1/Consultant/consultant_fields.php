@@ -268,7 +268,7 @@
 	<h3>Experience and Specialisation Details</h3>
 </div>
 <div class="row">
-	<div class="col-md-5">
+	<div class="col-md-5" id="prof_qf">
 		<div class="row">
 			<h4>Professinal Qualification</h4>
 		</div>
@@ -286,11 +286,11 @@
 		</div>
 		<div class="row">
 			<input type = "button" value = "Add" onclick = "add_row('prq', 'qlf', 'exp')">
-			<input type = "button" value = "Delete" onclick = "del_row('prq')"><br><br>
+			<input type = "button" value = "Delete" onclick = "del_row('prq', 'qlf', 'exp')"><br><br>
 		</div>	
 	</div>
 	<div class="col-md-1"></div>
-	<div class="col-md-5">
+	<div class="col-md-5" id="fexp">
 		<div class="row">
 			<h4>Field(s) of Experience</h4>
 		</div>
@@ -308,12 +308,12 @@
 		</div>
 		<div class="row">
 			<input type = "button" value = "Add" onclick = "add_row('f', 'field', 'f_dur')">
-			<input type = "button" value = "Delete" onclick = "del_row('f')">
+			<input type = "button" value = "Delete" onclick = "del_row('f', 'field', 'f_dur')">
 		</div>
 	</div>
 </div>
 <div class="row">
-	<div class="col-md-5">
+	<div class="col-md-5" id="spass">
 		<div class="row">
 			<h4>Special Assignments - Carried out for National/International Org.</h4></div>
 		<div class="row">
@@ -330,7 +330,7 @@
 		</div>
 		<div class="row">
 		<input type = "button" value = "Add" onclick = "add_row('assg', 'assgn', 'dur')">
-		<input type = "button" value = "Delete" onclick = "del_row('assg')">
+		<input type = "button" value = "Delete" onclick = "del_row('assg', 'assgn', 'dur')">
 		</div>
 	</div>
 	<div class="col-md-1"></div>

@@ -52,6 +52,9 @@ function cnslt_details(curr_coord)
 			                document.getElementById("more_submit").disabled = false;
 			            }
 			            bigger_form(cnslt_id);
+			            prof_q(cnslt_id);
+			            f_exp(cnslt_id);
+			            sp_assgn(cnslt_id);
 			        }
 			    };
 
@@ -146,4 +149,107 @@ function bigger_form(cnslt_id)
 
     xmlhttp3.open("GET","big_form.php?q="+cnslt_id,true);
     xmlhttp3.send();
+};
+
+function prof_q(cnslt_id)
+{
+	var xmlhttp4 = new XMLHttpRequest();
+
+	xmlhttp4.onreadystatechange = function() 
+    {
+        if (xmlhttp4.readyState == 4 && xmlhttp4.status == 200) 
+        {
+        	var data = JSON.parse(xmlhttp4.responseText);
+       
+        	var i, j = 1;
+        	for (i = 0; i < data[0]; ++i)
+        	{
+        		document.getElementsByName('qlf[' + i + ']')[0].value = data[j++];
+        		document.getElementsByName('exp[' + i + ']')[0].value = data[j++];
+        		add_row('prq', 'qlf', 'exp');
+        	}
+        	del_row('prq');
+        }
+    }
+
+    xmlhttp4.open("GET","prof_q.php?q="+cnslt_id,true);
+    xmlhttp4.send();
+};
+
+function f_exp(cnslt_id)
+{
+	var xmlhttp5 = new XMLHttpRequest();
+
+	xmlhttp5.onreadystatechange = function() 
+    {
+        if (xmlhttp5.readyState == 4 && xmlhttp5.status == 200) 
+        {
+        	var data = JSON.parse(xmlhttp5.responseText);
+
+        	var i, j = 1;
+        	for (i = 0; i < data[0]; ++i)
+        	{
+        		document.getElementsByName('field[' + i + ']')[0].value = data[j++];
+        		document.getElementsByName('f_dur[' + i + ']')[0].value = data[j++];
+        		add_row('f', 'field', 'f_dur');
+        	}
+        	del_row('f');
+        }
+    }
+
+    xmlhttp5.open("GET","f_exp.php?q="+cnslt_id,true);
+    xmlhttp5.send();
+};
+
+function sp_assgn(cnslt_id)
+{
+	var xmlhttp6 = new XMLHttpRequest();
+
+	xmlhttp6.onreadystatechange = function() 
+    {
+        if (xmlhttp6.readyState == 4 && xmlhttp6.status == 200) 
+        {
+        	var data = JSON.parse(xmlhttp6.responseText);
+
+        	var i, j = 1;
+        	for (i = 0; i < data[0]; ++i)
+        	{
+        		document.getElementsByName('assgn[' + i + ']')[0].value = data[j++];
+        		document.getElementsByName('dur[' + i + ']')[0].value = data[j++];
+        		add_row('assg', 'assgn', 'dur');
+        	}
+        	del_row('assg');
+        }
+    }
+
+    xmlhttp6.open("GET","sp_assgn.php?q="+cnslt_id,true);
+    xmlhttp6.send();
+};
+
+function add_row (tableid, a, b)
+{
+	var table = document.getElementById(tableid);
+	var rowno = document.getElementById(tableid).rows.length;
+	var row = table.insertRow(rowno);
+	--rowno;
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var t1 = document.createElement("input");
+	t1.type = "text";
+	t1.name = a + '[' + rowno + ']';
+	t1.id = "cell";
+	cell1.appendChild(t1);
+	var t2 = document.createElement("input");
+	t2.type = "text";
+	t2.name = b + '[' + rowno + ']';
+	t2.id = "cell";
+	cell2.appendChild(t2);
+};
+
+function del_row (tableid)
+{
+	var rowno = document.getElementById(tableid).rows.length;
+	if (rowno == 2)
+		return;
+	document.getElementById(tableid).deleteRow(rowno-1);
 };

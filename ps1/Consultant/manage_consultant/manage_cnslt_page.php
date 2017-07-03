@@ -112,7 +112,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			</form>
 			</div>
 			<br>			
-			<a onclick="show_more()" id="toggle">See More</a>
+			<a onclick="show_more()" id="toggle">Show More</a>
 
 			<div id="show_more" hidden><br>
 				<form action="update_cnslt2.php" method="post">

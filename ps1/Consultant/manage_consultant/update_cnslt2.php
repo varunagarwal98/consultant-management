@@ -20,40 +20,49 @@ dob = '$dob', basic_sal = $basic_sal, gross_sal = $gross_sal where cnslt_id = $c
 if(!mysqli_query($conn, $sql))
 	echo "error";
 
-// $stmt = $conn->prepare("UPDATE prof_q SET cnslt_id= ?, qlf = ?, exp = ?");
-// $stmt->bind_param("dss", $cnslt_id, $q, $e);
+$sql = "delete from prof_q where cnslt_id = $cnslt_id";
+mysqli_query($conn, $sql);
 
-// for ($i = 0; $i < count($qlf); $i++)
-// {
-// 	$q = mysql_real_escape_string(trim($qlf[$i]));
-// 	$e = mysql_real_escape_string(trim($exp[$i]));
+$sql = "delete from f_exp where cnslt_id = $cnslt_id";
+mysqli_query($conn, $sql);
 
-// 	if (!$stmt->execute())
-// 		echo "failed";
-// }
+$sql = "delete from sp_assgn where cnslt_id = $cnslt_id";
+mysqli_query($conn, $sql);
 
-// $stmt2 = $conn->prepare("UPDATE sp_assgn SET cnslt_id = ?, assgn = ?, assgn_dur = ?)");
-// $stmt2->bind_param("dss", $cnslt_id, $a, $d);
+$stmt = $conn->prepare("INSERT INTO prof_q (cnslt_id, qlf, exp) VALUES (?, ?, ?)");
+$stmt->bind_param("dss", $cnslt_id, $q, $e);
 
-// for ($i = 0; $i < count($assgn); $i++)
-// {
-// 	$a = mysql_real_escape_string(trim($assgn[$i]));
-// 	$d = mysql_real_escape_string(trim($dur[$i]));
+for ($i = 0; $i < count($qlf); $i++)
+{
+	$q = mysql_real_escape_string(trim($qlf[$i]));
+	$e = mysql_real_escape_string(trim($exp[$i]));
 
-// 	if (!$stmt2->execute())
-// 		echo "failed";
-// }
+	if (!$stmt->execute())
+		echo "failed";
+}
 
-// $stmt3 = $conn->prepare("UPDATE f_exp SET cnslt_id = ?, field = ?, f_dur = ?)");
-// $stmt3->bind_param("dss", $cnslt_id, $f, $d);
+$stmt2 = $conn->prepare("INSERT INTO sp_assgn (cnslt_id, assgn, assgn_dur) VALUES (?, ?, ?)");
+$stmt2->bind_param("dss", $cnslt_id, $a, $d);
 
-// for ($i = 0; $i < count($field); $i++)
-// {
-// 	$f = mysql_real_escape_string(trim($field[$i]));
-// 	$d = mysql_real_escape_string(trim($f_dur[$i]));
+for ($i = 0; $i < count($assgn); $i++)
+{
+	$a = mysql_real_escape_string(trim($assgn[$i]));
+	$d = mysql_real_escape_string(trim($dur[$i]));
 
-// 	if (!$stmt3->execute())
-// 		echo "failed";
-// }
+	if (!$stmt2->execute())
+		echo "failed";
+}
+
+$stmt3 = $conn->prepare("INSERT INTO f_exp (cnslt_id, field, f_dur) VALUES (?, ?, ?)");
+$stmt3->bind_param("dss", $cnslt_id, $f, $d);
+
+for ($i = 0; $i < count($field); $i++)
+{
+	$f = mysql_real_escape_string(trim($field[$i]));
+	$d = mysql_real_escape_string(trim($f_dur[$i]));
+
+	if (!$stmt3->execute())
+		echo "failed";
+}
 
 ?>
