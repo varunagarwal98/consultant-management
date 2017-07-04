@@ -58,7 +58,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 				<h2>Consultant Form 1A</h2>
 			</div>
 			<div class="row">
-				Consultant ID *: <input type="number" name="cnslt_id" id="cnslt_id"> <input type="button" value="Go" onclick="go()">  <input type="button" value="Download Form 1A" onclick="window.location.href='down_form2.php'" id="download" disabled>
+				Consultant ID *: <input type="number" name="cnslt_id" id="cnslt_id"> <input type="button" value="Go" onclick="go()">  <input type="button" value="Download Form 1A" onclick="window.location.href='down_form_2.php'" id="download" disabled>
 			</div>
 			<div class="row"><br></div>
 			<div class="row">
