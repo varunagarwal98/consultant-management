@@ -25,33 +25,39 @@ Declaration by Specialist Engaged / Proposed to be Engaged in AERB Work <br>
 	<tr>
 		<td>1.</td>
 		<td>Name</td>
-		<td>: '.$row['f_name'].' '.$row['mid_name'].' '.$row['l_name'].'</td>
+		<td>:</td>
+		<td>'.$row['f_name'].' '.$row['mid_name'].' '.$row['l_name'].'</td>
 	</tr><br>
 	<tr>
 		<td>2.</td>
 		<td>Proposed Assignment in AERB</td>
-		<td>: '.$row['assgn'].'</td>
+		<td>:</td>
+		<td>'.$row['assgn'].'</td>
 	</tr><br>
 	<tr>
 		<td>3.</td>
 		<td>Present Professional Engagement<br>(Full time / Part time / Consultancy/<br> Others [Specify])</td>
-		<td>: '.$row['prof_eng'].'</td>
+		<td>:</td>
+		<td>'.$row['prof_eng'].'</td>
 	</tr><br>
 	
 	<tr>
 		<td>4.</td>
 		<td>Name and Address of the engaging<br> Company/Institution</td>
-		<td>: '.$row['eng_comp'].'<br>'.$row['add_comp'].'</td>
+		<td>:</td>
+		<td>'.$row['eng_comp'].'<br>'.$row['add_comp'].'</td>
 	</tr><br>
 	<tr>
 		<td></td>
 		<td>Designation in Company/Institution</td>
-		<td>: '.$row['desg_comp'].'</td>
+		<td>:</td>
+		<td>'.$row['desg_comp'].'</td>
 	</tr><br>
 	<tr>
 		<td>5.</td>
 		<td>Nature of Work: (Please elaborate<br> areas of work/assignments) </td>
-		<td>: '.$row['nature_comp'].'</td>
+		<td>:</td>
+		<td>'.$row['nature_comp'].'</td>
 	</tr>
 </table>
 
