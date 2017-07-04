@@ -19,7 +19,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
   	<script src="http://code.jquery.com/jquery-1.5.js"></script>
   	<link rel="stylesheet" type="text/css" href="../create_consultant/create_consultant.css">
   	<script type="text/javascript" src="../create_consultant/create_consultant.js"></script>
-  	<!-- <script> 
+  	<script> 
   	$(document).ready(function(){
 	   var $form = $('form');
 	   $form.submit(function(){
@@ -33,7 +33,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 	      return false;
 	   });
 	});
-	</script> -->
+	</script>
 
 </head>
 <body>
