@@ -55,7 +55,7 @@ if($result = mysqli_query($conn, $sql))
 
 
 $mpdf = new mPDF('A4-L');
-include 'form_2_a.php';
+include 'form_2/form_2_a.php';
 $mpdf->WriteHTML($html);
 
 //echo "1";
@@ -72,7 +72,7 @@ while ($i < $p)
 	$i++;
 }
 
-include 'form_2_b.php';
+include 'form_2/form_2_b.php';
 $mpdf->WriteHTML($html2);
 
 $i = 0;
@@ -87,7 +87,7 @@ while ($i < $a)
 	$i++;
 }
 
-include 'form_2_c.php';
+include 'form_2/form_2_c.php';
 $mpdf->WriteHTML($html3);
 
 $i = 0;
@@ -102,7 +102,7 @@ while ($i < $f)
 	$i++;
 }
 
-include 'form_2_d.php';
+include 'form_2/form_2_d.php';
 $mpdf->WriteHTML($html4);
 
 
