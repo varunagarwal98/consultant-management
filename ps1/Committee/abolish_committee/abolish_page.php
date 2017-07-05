@@ -59,7 +59,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 		<div class="col-md-5">Committee ID: <input type = "number" name = "com_id" id = "com_id">
 			<input type = "button" value = "Get Data" onclick="go(<?php echo $_SESSION['coord_id'];?>)">
 			<br><br>
-			<input type="button" value="Abolish" id="abolish" disabled>
+			<input type="button" value="Abolish" id="abolish" disabled onclick="abolish()">
 		</div>
 	</div>
 	<div>

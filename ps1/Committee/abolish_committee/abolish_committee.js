@@ -38,3 +38,18 @@ function enable_button(coord_id)
     xmlhttp.open("GET","enable.php?q="+com_id,true);
     xmlhttp.send();  
 };
+
+function abolish()
+{
+    var xmlhttp = new XMLHttpRequest();
+    
+    xmlhttp.onreadystatechange = function() 
+    {
+        if (this.readyState == 4 && this.status == 200)
+            alert(this.responseText);
+    };
+    
+    var com_id = document.getElementById('com_id').value;
+    xmlhttp.open("GET","abolish.php?q="+com_id,true);
+    xmlhttp.send();
+};
