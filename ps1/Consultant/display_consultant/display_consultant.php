@@ -1,6 +1,6 @@
 <?php 
 
-$q = mysql_real_escape_string(trim($_GET['q']));
+$q = trim($_GET['q']);
 
 include '../connect.php';
 
