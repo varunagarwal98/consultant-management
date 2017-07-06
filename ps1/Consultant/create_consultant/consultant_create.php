@@ -64,7 +64,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 				<h2>Create Consultant</h2>
 			</div>
 			<?php include '../consultant_fields.php';?>
-			<input type = "submit">
+			<input type = "submit" value="Submit">
 		</div>
 	</div>
 </div>
