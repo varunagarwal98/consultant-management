@@ -1,6 +1,31 @@
-#recon{
-	display: none;
+.col {
+  padding-right:7px;
+  padding-left:7px;
 }
-#sub{
-	display: none;
+h1{
+        margin: 30px 0;
+        padding: 0 200px 15px 0;
+        border-bottom: 1px solid #E5E5E5;
+    }
+.basic{
+    	margin: 20px;
+    }
+.verticalLine {
+		  border-left: thick solid #ff0000;
 }
+
+.affix{
+  top: 100px;
+}
+
+table, th
+{
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px;
+}
+td
+{
+  border: 1px solid black;
+}
+

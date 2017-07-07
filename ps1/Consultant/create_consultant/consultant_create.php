@@ -48,10 +48,11 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 				<li class="dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="../../Committee/create_committee/create_committee.html">Committee<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="../../Committee/create_committee/create_committee.html">Create Committee</a></li>
-						<li><a href="../../Committee/display_committee/display_committee.html">Display Committee</a></li>
-						<li><a href="../../Committee/abolish_committee/abolish_committee.html">Abolish Committee</a></li>
-						<li><a href="../../Committee/modify_committee/modify_committee.html">Modify Committee</a></li>
+						<li><a href="../../Committee/create_committee/create_page.php">Create Committee</a></li>
+						<li><a href="../../Committee/display_committee/display_page.php">Display Committee</a></li>
+						<li><a href="../../Committee/abolish_committee/abolish_page.php">Abolish Committee</a></li>
+						<li><a href="../../Committee/modify_committee/modify_page.php">Modify Committee</a></li>
+						<li><a href="../../Committee/download_committee/download_page.php">Committee Form</a></li>
 					</ul>
 				</li><br><br>
 				<div class="row" align="center"><input type="button" value="Logout" onclick="document.location.href='../../Login/logout.php'"></div>

@@ -17,6 +17,12 @@ function go(coord_id)
     };
 	
 	var com_id = document.getElementById('com_id').value;
+
+    if (com_id == "")
+    {
+        alert("Enter Committee ID");
+        return;   
+    }
 	xmlhttp.open("GET","info.php?q="+com_id,true);
     xmlhttp.send();  
 };

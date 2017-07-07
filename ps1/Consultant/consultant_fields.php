@@ -8,7 +8,7 @@
 			<h4>Name</h4>
 		</div>
 		<div class = "row">
-			<div class="col-md-4">Title: <font color="red">*</font></div>
+			<div class="col-md-4"><label>Title: </label><font color="red">*</font></div>
 			<div class="col-md-4">
 					<select name = "title" required id="title">
 						<option value =""></option>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4">First Name: <font color="red">*</font></div>
+			<div class="col-md-4"><label>First Name: <font color="red">*</font></label></div>
 			<div class="col-md-4"><input type = "text" name = "f_name" required></div>
 		</div>
 		<div class="row">
@@ -146,7 +146,7 @@
 			<div class="col-md-4"><input type = "text" name = "mob_no"></div>
 		</div>
 		<div class = "row">
-			<div class="col-md-6">Primary Email ID: <font color="red">*</font></div>
+			<div class="col-md-6"><label>Primary Email ID: </label><font color="red">*</font></div>
 			<div class="col-md-4"><input type = "email" name = "email_1" required></div>
 		</div>
 		<div class = "row">
@@ -362,7 +362,7 @@
 	<h3>Present Engagement Details</h3><br>
 </div>
 <div class="row">
-	<div class="col-md-4" id="col1">If Retired?: <font color="red">*</font></div>
+	<div class="col-md-4" id="col1"><label>If Retired?: </label><font color="red">*</font></div>
 	<div class="col-md-7" id="col2">
 		<select name = "retired_bool">
 			<option value = "no">No</option>

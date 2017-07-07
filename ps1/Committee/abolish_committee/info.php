@@ -2,11 +2,11 @@
 
 $q = mysql_real_escape_string(trim($_GET['q']));
 
-include '../connect.php';
+include '../../Consultant/connect.php';
 
 $_SESSION['com_id'] = $q;
 
-$sql = "select com_id, com_name, com_abb, coord_id, com_category, com_status, proc_status
+$sql = "select com_id, com_name, com_abb, com_spoc, com_category, com_status, proc_status
 		from com_bnk where com_id = " . $q;
 
 if($result = mysqli_query($conn, $sql))
@@ -30,7 +30,7 @@ if($result = mysqli_query($conn, $sql))
 					echo "<td>" . $row['com_id'] . "</td>";
 				    echo "<td>" . $row['com_name'] . "</td>";
 				    echo "<td>" . $row['com_abb'] . "</td>";
-				    echo "<td>" . $row['coord_id'] . "</td>";
+				    echo "<td>" . $row['com_spoc'] . "</td>";
 				    echo "<td>" . $row['com_category'] . "</td>";
 				    echo "<td>" . $row['com_status'] . "</td>";
 				    echo "<td>" . $row['proc_status'] . "</td>";
