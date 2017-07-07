@@ -21,9 +21,20 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
+
+<?php
+	if (isset($_SESSION['upload']))
+	{
+		echo '<script language="javascript">';
+		echo 'alert("Upload Successful!")';
+		echo '</script>';
+		unset($_SESSION['upload']);
+	} 
+?>
 
 <div class="container-fluid">
 	<div class="col-md-2">

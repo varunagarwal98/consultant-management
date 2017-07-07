@@ -19,10 +19,8 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 	    $fileName = addslashes($fileName);
 	}
 
-	$query = "insert into com_form_bnk (com_id, file_name, file, file_type, file_size) 
-				values ($com_id, '$fileName', '$content', '$fileType', $fileSize)";
+	$query = "update com_bnk set file_name = '$fileName', file = '$content', file_type = '$fileType', file_size = $fileSize where com_id = $com_id";
 
-	echo $query;
 	mysqli_query($conn, $query) or die('Error, query failed');
 	$_SESSION['upload'] = "yes";
 	header('Location: download_page.php');
