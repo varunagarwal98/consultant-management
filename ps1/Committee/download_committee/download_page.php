@@ -12,7 +12,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 	<link rel = "stylesheet" href = "download_page.css">
 	
-	<script src = "create_committee.js"></script>
+	<script src = "download_page.js"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -56,14 +56,16 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 		<div class="page-header"><h2>Committee Form</h2></div>
 
 		<div class="row">
-				Committee ID : <input type="number" name="com_id" id="com_id"> <input type="button" value="Go" onclick="go()">  <input type="button" value="Download Form" onclick="window.location.href='down_form.php'" id="download" disabled>
+				Committee ID : <input type="number" name="com_id" id="com_id"> 
+				<input type="button" value="Go" onclick="go()">  
+				<input type="button" value="Download Form" onclick="window.location.href='down_form.php'" id="download" disabled>
 			</div>
 			<div class="row"><br></div>
 			<div class="row">
 				<form id="data" method="post" enctype="multipart/form-data" action="up_form.php">
-				<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-				<input name="userfile" type="file" id="userfile" disabled>
-				<input name="upload" type="submit" id="upload" value="Upload Form" disabled>
+					<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+					<input name="userfile" type="file" id="userfile" disabled>
+					<input name="upload" type="submit" id="upload" value="Upload Form" disabled>
 				</form>
 			</div>
 			<div class="row">
