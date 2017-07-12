@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
@@ -22,6 +22,18 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+		 var $form = $('form');
+		 $form.submit(function(){
+				$.post($(this).attr('action'), $(this).serialize(), function(response){
+				},'json');
+				alert("Committee Updated");
+				return false;
+		 });
+	});
+	</script>
 </head>
 <body>
 

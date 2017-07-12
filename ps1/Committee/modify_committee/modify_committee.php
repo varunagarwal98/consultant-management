@@ -8,5 +8,21 @@ $sql = "update com_bnk set create_type = '$create_type', ref_com_id = '$ref_com_
 
 if(!mysqli_query($conn, $sql))
 	echo "error";
+$query = "delete from com_cnslt where com_id=$com_id";
+if(!mysqli_query($conn, $query))
+	echo "error";
 
+$stmt = $conn->prepare("INSERT INTO com_cnslt (com_id, cnslt_id, role) VALUES (?, ?, ?)");
+$stmt->bind_param("dds", $com, $cnslt, $r);
+
+$com = $com_id;
+
+for ($i = 0; $i < count($cnslt_id); $i++)
+{
+	$cnslt = mysqli_real_escape_string($conn,trim($cnslt_id[$i]));
+	$r = mysqli_real_escape_string($conn,trim($role[$i]));
+
+	if (!$stmt->execute())
+		echo "failed";
+}
 ?>
