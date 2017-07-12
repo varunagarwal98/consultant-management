@@ -1,6 +1,6 @@
 <?php 
 
-$q = mysql_real_escape_string(trim($_GET['q']));
+$q = mysqli_real_escape_string($conn,trim($_GET['q']));
 
 include '../../Consultant/connect.php';
 
