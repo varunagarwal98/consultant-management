@@ -1,8 +1,8 @@
-<?php session_start(); 
+<?php session_start();
 
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $db = "consultant";
 
 //Create connection

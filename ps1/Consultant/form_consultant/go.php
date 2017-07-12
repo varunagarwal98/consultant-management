@@ -1,10 +1,9 @@
-<?php 
-
-$q = mysql_real_escape_string(trim($_GET['q']));
+<?php
 
 include '../connect.php';
+$q = mysqli_real_escape_string($conn,trim($_GET['q']));
 
-$_SESSION['cnslt_id'] = mysql_real_escape_string(trim($q));
+$_SESSION['cnslt_id'] = mysqli_real_escape_string($conn,trim($q));
 
 $sql = "select cnslt_id, f_name, l_name, cnslt_type, email_1, coord_id, proc_status, cnslt_stat
 		from cnslt_bnk where cnslt_id = " . $q;
@@ -23,7 +22,7 @@ if($result = mysqli_query($conn, $sql))
 				echo "<th>Processing Status </th>";
 				echo "<th>Status </th>";
 			echo "</tr>";
-			
+
 			while($row = mysqli_fetch_array($result))
 			{
 				echo "<tr>";
@@ -40,7 +39,7 @@ if($result = mysqli_query($conn, $sql))
         echo "</table>";
         // Close result set
 	    mysqli_free_result($result);
-    } 
+    }
 }
 else
 	echo "ERROR: Could not execute $sql.";

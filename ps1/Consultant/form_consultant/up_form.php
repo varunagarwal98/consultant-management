@@ -21,8 +21,9 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 
 	$query = "UPDATE cnslt_bnk SET file_name = '$fileName', form_1a = '$content', file_type = '$fileType', file_size = $fileSize where cnslt_id = $cnslt_id";
 
-	mysqli_query($conn, $query) or die('Error, query failed');
-	$_SESSION['upload'] = "yes";
-	header('Location: consultant_form.php');
+	echo $query;
+	// mysqli_query($conn, $query) or die('Error, query failed');
+	// $_SESSION['upload'] = "yes";
+	// header('Location: consultant_form.php');
 }
 ?>

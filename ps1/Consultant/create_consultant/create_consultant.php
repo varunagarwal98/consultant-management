@@ -39,8 +39,8 @@ $cnslt_id = mysqli_insert_id($conn);
 
 for ($i = 0; $i < count($qlf); $i++)
 {
-	$q = mysql_real_escape_string(trim($qlf[$i]));
-	$e = mysql_real_escape_string(trim($exp[$i]));
+	$q = mysqli_real_escape_string($conn,trim($qlf[$i]));
+	$e = mysqli_real_escape_string($conn,trim($exp[$i]));
 
 	if (!$stmt->execute())
 		echo "failed";
@@ -51,8 +51,8 @@ $stmt2->bind_param("dss", $cnslt_id, $a, $d);
 
 for ($i = 0; $i < count($assgn); $i++)
 {
-	$a = mysql_real_escape_string(trim($assgn[$i]));
-	$d = mysql_real_escape_string(trim($dur[$i]));
+	$a = mysqli_real_escape_string($conn,trim($assgn[$i]));
+	$d = mysqli_real_escape_string($conn,trim($dur[$i]));
 
 	if (!$stmt2->execute())
 		echo "failed";
@@ -63,8 +63,8 @@ $stmt3->bind_param("dss", $cnslt_id, $f, $d);
 
 for ($i = 0; $i < count($field); $i++)
 {
-	$f = mysql_real_escape_string(trim($field[$i]));
-	$d = mysql_real_escape_string(trim($f_dur[$i]));
+	$f = mysqli_real_escape_string($conn,trim($field[$i]));
+	$d = mysqli_real_escape_string($conn,trim($f_dur[$i]));
 
 	if (!$stmt3->execute())
 		echo "failed";
