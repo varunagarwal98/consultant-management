@@ -26,19 +26,19 @@
 		<h4>Username: <input type="number" name="coord_id" required></h4><br>
 		<h4>Password: <input type="password" name="pass" required></h4>
 	</div>
-	
+
 	<div id="errMsg">
-        <?php 
-        	if(isset($_SESSION['errMsg'])) 
+        <?php
+        	if(isset($_SESSION['errMsg']))
         	{
         		echo '<script>';
         		echo 'alert("Incorrect Username or Password")';
     	    	echo '</script>';
-    	    	unset($_SESSION['errMsg']); 
+    	    	unset($_SESSION['errMsg']);
     	    }
     	?>
     </div>
-      	
+
 	<div class="well" align="center">
 		<input type="submit" value="Login">
 	</div>
