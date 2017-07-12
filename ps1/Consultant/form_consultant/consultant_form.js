@@ -19,8 +19,11 @@ function go()
             {
             	document.getElementById("det").innerHTML = this.responseText;
             	document.getElementById("upload").disabled = false;
+                document.getElementById("upload2").disabled = false;
             	document.getElementById("download").disabled = false;
+                document.getElementById("download2").disabled = false;
             	document.getElementById("userfile").disabled = false;
+                document.getElementById("userfile2").disabled = false;
             }
 
         }

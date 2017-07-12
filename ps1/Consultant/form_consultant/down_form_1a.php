@@ -2,7 +2,7 @@
 
 $cnslt_id = $_SESSION['cnslt_id'];
 
-$query = "select file_name from cnslt_bnk where cnslt_id = $cnslt_id and file_name NOT NULL";
+$query = "select file_name from cnslt_bnk where cnslt_id = $cnslt_id and file_size > 0";
 
 if ($result = mysqli_query($conn, $query))
 	if(mysqli_num_rows($result) > 0)

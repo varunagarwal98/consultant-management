@@ -1,10 +1,8 @@
-<?php 
-
-$q = mysql_real_escape_string(trim($_GET['q']));
-
+<?php
 include '../../Consultant/connect.php';
 
-$_SESSION['com_id'] = mysql_real_escape_string(trim($q));
+$q = mysqli_real_escape_string($conn,trim($_GET['q']));
+$_SESSION['com_id'] = mysqli_real_escape_string($conn,trim($q));
 
 $sql = "select com_id, com_name, com_abb from com_bnk where com_id = " . $q;
 
@@ -18,7 +16,7 @@ if($result = mysqli_query($conn, $sql))
 				echo "<th>Committee Name </th>";
 				echo "<th>Committee Abb </th>";
 			echo "</tr>";
-			
+
 			while($row = mysqli_fetch_array($result))
 			{
 				echo "<tr>";
@@ -31,7 +29,7 @@ if($result = mysqli_query($conn, $sql))
         echo "</table>";
         // Close result set
 	    mysqli_free_result($result);
-    } 
+    }
 }
 else
 	echo "ERROR: Could not execute $sql.";

@@ -48,8 +48,13 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6">Consultant Type: </div>
-			<div class="col-md-4"> <input type="text" value="Expert" readonly>
-			<input type="text" name="cnslt_type" value="EX" hidden></div>
+			<div class="col-md-4"> <select name = "cnslt_type" disabled>
+										<option value = "Specialist">Specialist</option>
+										<option value = "Expert" selected>Expert</option>
+										<option value = "Consultant">Consultant</option>
+									</select>
+									<input type="text" name="cnslt_type" value="Expert" hidden>
+			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-6">Proposed Assignment:</div>
@@ -65,7 +70,13 @@
 		</div>
 		<div class="row">
 			<div class="col-md-6">Consultant Status: </div>
-			<div class="col-md-4"><input type="text" name="cnslt_stat" value="New" readonly> </div>
+			<div class="col-md-4"><select name = "cnslt_status" disabled>
+										<option value = "New" selected>New</option>
+										<option value = "Active">Active</option>
+										<option value = "Inactive">Inactive</option>
+									</select>
+									<input type="text" name="cnslt_status" value="New" hidden>
+			</div>
 		</div>
 	</div>
 </div>
@@ -95,46 +106,49 @@
 		<div class = "row">
 			<div class="col-md-4">State:</div>
 			<div class="col-md-4"><select name = "state"> 
-						<option value = "andhra pradesh">Andhra Pradesh</option>
-						<option value = "arunachal pradesh">Arunachal Pradesh</option>
-						<option value = "assam">Assam</option>
-						<option value = "bihar">Bihar</option>
-						<option value = "goa">Goa</option>
-						<option value = "gujarat">Gujarat</option>
-						<option value = "haryana">Haryana</option>
-						<option value = "himachal pradesh">Himachal Pradesh</option>
-						<option value = "jammu and kashmir">Jammu And Kashmir</option>
-						<option value = "karnataka">Karnataka</option>
-						<option value = "kerala">Kerala</option>
-						<option value = "madhya pradesh">Madhya Pradesh</option>
-						<option value = "maharashtra">Maharashtra</option>
-						<option value = "manipur">Manipur</option>
-						<option value = "meghalaya">Meghalaya</option>
-						<option value = "mizoram">Mizoram</option>
-						<option value = "nagaland">Nagaland</option>
-						<option value = "orissa">Orissa</option>
-						<option value = "punjab">Punjab</option>
-						<option value = "rajasthan">Rajasthan</option>
-						<option value = "sikkim">Sikkim</option>
-						<option value = "tamil nadu">Tamil Nadu</option>
-						<option value = "tripura">Tripura</option>
-						<option value = "uttar pradesh">Uttar Pradesh</option>
-						<option value = "west bengal">West Bengal</option>
-						<option value = "andaman and nico.in.">Andaman And Nico.In.</option>
-						<option value = "chandigarh">Chandigarh</option>
-						<option value = "dadra and nagar hav.">Dadra And Nagar Hav.</option>
-						<option value = "daman and diu">Daman And Diu</option>
-						<option value = "delhi">Delhi</option>
-						<option value = "lakshadweep">Lakshadweep</option>
-						<option value = "pondicherry">Pondicherry</option>
-						<option value = "chhattisgarh">Chhattisgarh</option>
-						<option value = "jharkhand">Jharkhand</option>
-						<option value = "uttaranchal">Uttaranchal</option>
+						<option value = "Andhra Pradesh">Andhra Pradesh</option>
+						<option value = "Arunachal Pradesh">Arunachal Pradesh</option>
+						<option value = "Assam">Assam</option>
+						<option value = "Bihar">Bihar</option>
+						<option value = "Goa">Goa</option>
+						<option value = "Gujarat">Gujarat</option>
+						<option value = "Haryana">Haryana</option>
+						<option value = "Himachal Pradesh">Himachal Pradesh</option>
+						<option value = "Jammu and Kashmir">Jammu And Kashmir</option>
+						<option value = "Karnataka">Karnataka</option>
+						<option value = "Kerala">Kerala</option>
+						<option value = "Madhya Pradesh">Madhya Pradesh</option>
+						<option value = "Maharashtra">Maharashtra</option>
+						<option value = "Manipur">Manipur</option>
+						<option value = "Meghalaya">Meghalaya</option>
+						<option value = "Mizoram">Mizoram</option>
+						<option value = "Nagaland">Nagaland</option>
+						<option value = "Orissa">Orissa</option>
+						<option value = "Punjab">Punjab</option>
+						<option value = "Rajasthan">Rajasthan</option>
+						<option value = "Sikkim">Sikkim</option>
+						<option value = "Tamil Nadu">Tamil Nadu</option>
+						<option value = "Tripura">Tripura</option>
+						<option value = "Uttar Pradesh">Uttar Pradesh</option>
+						<option value = "West Bengal">West Bengal</option>
+						<option value = "Andaman and Nico.In.">Andaman And Nico.In.</option>
+						<option value = "Chandigarh">Chandigarh</option>
+						<option value = "Dadra and Nagar Hav.">Dadra And Nagar Hav.</option>
+						<option value = "Daman and Diu">Daman And Diu</option>
+						<option value = "Delhi">Delhi</option>
+						<option value = "Lakshadweep">Lakshadweep</option>
+						<option value = "Pondicherry">Pondicherry</option>
+						<option value = "Chhattisgarh">Chhattisgarh</option>
+						<option value = "Jharkhand">Jharkhand</option>
+						<option value = "Uttaranchal">Uttaranchal</option>
 					</select></div>
 		</div>
 		<div class = "row">
 			<div class="col-md-4">Country: </div>
-			<div class="col-md-4"><input type="text" name="country" value="IN"></div>
+			<div class="col-md-4"><select name="country" value="India">
+									<?php include'../countries.php';?>
+								</select>
+			</div>
 		</div>
 	</div>
 	<div class = "col-md-5">
@@ -340,19 +354,24 @@
 		<div class="row">
 
 		Fields of Spcl - 1: <select name = "f_sp1"> 
-							<option value = ""></option>
+								<option value = ""></option>
+								<?php include'../fields_spc.php';?>
 							</select><br>
 		Fields of Spcl - 2: <select name = "f_sp2">
-							<option value = ""></option>
+								<option value = ""></option>
+								<?php include'../fields_spc.php';?>
 							</select> <br>
 		Fields of Spcl - 3: <select name = "f_sp3">
-							<option value = ""></option>
+								<option value = ""></option>
+								<?php include'../fields_spc.php';?>
 							</select><br>
 		Fields of Spcl - 4: <select name = "f_sp4">
-							<option value = ""></option>
+								<option value = ""></option>
+								<?php include'../fields_spc.php';?>
 							</select><br>
 		Fields of Spcl - 5: <select name = "f_sp5">
-							<option value = ""></option>
+								<option value = ""></option>
+								<?php include'../fields_spc.php';?>
 							</select></div>
 	</div>
 </div>

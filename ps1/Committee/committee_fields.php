@@ -19,7 +19,7 @@
 
 <div class="row"> <h4><b>Header Data</b></h4> </div>
 <br>
-<div id="1" class="toshow" style="display:none"> 
+<div id="1" class="toshow" style="display:none">
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Ref. Comm. ID: <font color="red">*</font> </label>
 		<div class="col-md-5">
@@ -30,7 +30,7 @@
 
  	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Reconstitution Type: <font color="red">*</font></label>
-		
+
 		<div class="col-md-5">
 
 			<select class="form-control" name = "reconst_type">
@@ -46,7 +46,7 @@
 <div id="2" class="toshow" style="display:none">
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Parent Comm. ID: <font color="red">*</font></label>
-	 	
+
 	 	<div class="col-md-5">
 			<input type="number" class="form-control" name = "ref_com_id" id="ref_com_id" placeholder="ID of the parent committee" >
 		</div>
@@ -56,7 +56,7 @@
 <div id ="3">
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee" >Committee Type: <font color="red">*</font></label>
-	
+
 		<div class="col-md-5">
 		 	<select class="form-control" name = "com_type" placeholder= "eg.Regular Committee" required>
 				<option value = "Standing">Standing Committee</option>
@@ -64,10 +64,10 @@
 			</select><br>
 		</div>
 	</div>
-	
+
 	<div class="form-group">
  	 	<label class="control-label col-md-3" for="create_committee">Committee Category: <font color="red">*</font></label>
- 		
+
  		<div class="col-md-5">
 
 			<select class="form-control" name = "com_cat" placeholder= "eg.ADVISORY COMMITTEE" required>
@@ -92,17 +92,17 @@
  	</div>
 
  	<div class="form-group">
-		
+
 		<label class="control-label col-md-3" for="create_committee">Committee Name:</label>
-		
+
 		<div class="col-md-5">
 			<input type="text" class="form-control" name = "com_name" id="comm_name" placeholder="Name of the committee">
 		</div>
 	</div>
-	
+
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Committee Abbreviation:  <font color="red">*</font></label>
-	
+
 		<div class="col-md-5">
 			<input type="text" class="form-control" name = "com_abr" id="comm_abb" placeholder="Unique abbreviation of the committee" required>
 		</div>
@@ -110,15 +110,15 @@
 
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Const /Recons. Order No:</label>
-		
+
 		<div class="col-md-5">
 			<input type="text" class="form-control" name = "order_no" id="com_ord_no" placeholder="Const/recons order no">
 		</div>
 	</div>
-	
+
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Order Date:</label>
-	
+
 		<div class="col-md-5">
 			<input type="date" class="form-control" name = "order_date" id="com_order_date" placeholder="Date of the order">
 		</div>
@@ -126,20 +126,20 @@
 
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Valid From:  <font color="red">*</font></label>
-		
+
 		<div class="col-md-5">
 			<input type="date" class="form-control" name = "valid_from" id="valid_from" placeholder="Valid from" required>
 		</div>
 	</div>
-	
+
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Valid To:  <font color="red">*</font></label>
-		
+
 		<div class="col-md-5">
 			<input type="date" class="form-control" name = "valid_to" id="valid_to" placeholder="Valid to" required>
 		</div>
 	</div>
-	
+
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Committee SPOC: <font color="red">*</font></label>
 
@@ -149,10 +149,10 @@
 	</div>
 	<div class="form-group">
 		<label class="control-label col-md-3" for="create_committee">Approving Authority:</label>
-		
+
 		<div class="col-md-5">
 			<input type="text" class="form-control" name = "app_auth" id="app_com" placeholder="Approving Authority">
-				
+
 		</div>
 	</div>
 
@@ -160,10 +160,11 @@
 		<label class="control-label col-md-3" for="">Committee Status:</label>
 		<div class="col-md-5">
 			<select class="form-control" name = "com_stat" disabled>
-					<option value = "">New</option>
-					<option value = "AC">Active</option>
-					<option value = "IN">Inactive</option>
+					<option value = "New">New</option>
+					<option value = "Active">Active</option>
+					<option value = "Inactive">Inactive</option>
 			</select><br>
+			<input type="text" name = "com_stat" value="New" hidden>
 		</div>
  	</div>
 
@@ -171,16 +172,16 @@
 		<label class="control-label col-md-3" for="">Processing Status:</label>
 		<div class="col-md-5">
 			<select class="form-control" name = "proc_stat" disabled>
-					<option value="">New</option>
-					<option value = "SD">Saved As Draft</option>
-					<option value = "PR">Propsed</option>
-					<option value = "RH">Rejected by HOD</option>
-					<option value = "RG">Registered</option>
-					<option value = "SA">Processed by Admin</option>
-					<option value = "">New</option>
-					<option value = "AB">Abolished</option>
-					<option value = "PA">Propose to Abolished</option>
+					<option value = "New">New</option>
+					<option value = "Saved as Draft">Saved As Draft</option>
+					<option value = "Proposed">Propsed</option>
+					<option value = "Rejected by HOD">Rejected by HOD</option>
+					<option value = "Registered by Admin">Registered</option>
+					<option value = "Processed by Admin">Processed by Admin</option>
+					<option value = "Abolished">Abolished</option>
+					<option value = "Propose to be Abolished">Propose to Abolished</option>
 				</select><br>
+				<input type="text" name = "proc_stat" value="New" hidden>
 		</div>
  	</div>
 
@@ -199,86 +200,83 @@
 	Selection of Committee<br>
 </div>
 <div class="radio-inline">
-	<input type = "radio" name="com_details" value="back_data" onclick = "details_data(2)">
+	<input type = "radio" name="back_data" value="back_data" onclick = "details_data(2)">
 	Background Data<br>
 </div>
 <div class="radio-inline">
-	<input type = "radio" name="com_details" value="terms_ref" onclick = "details_data(3)">
+	<input type = "radio" name="terms_ref" value="terms_ref" onclick = "details_data(3)">
 	Terms of Reference<br>
 </div>
 <div class="radio-inline">
-	<input type = "radio" name="com_details" value="dis_list" onclick = "details_data(4)">
+	<input type = "radio" name="dis_list" value="dis_list" onclick = "details_data(4)">
 	Distribution List<br>
 </div>
 
-<div id="selectionOfMembers" class="toshow">
-	
+<div id="selectionOfMembers">
+
 	<br>
 	<div class="form-group">
 		<label class="control-label col-md-3" for="">Search by ID:</label>
  		<div class="col-md-5">
-		 	<input type="number" class="form-control" name = "cnslt_id" id="emp_id" placeholder="enter the ID">
+		 	<input type="number" class="form-control" name = "cnslt_id" id="cnslt_id" placeholder="enter the ID">
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label class="control-label col-md-3" for="">Search by First Name:</label>
 		<div class="col-md-5">
-			<input type="text" class="form-control" name = "f_name" placeholder="enter the name">
+			<input type="text" class="form-control" name = "f_name" id = "f_name" placeholder="enter the name">
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label class="control-label col-md-3" for="">Search by Last Name:</label>
 		<div class="col-md-5">
-			<input type="text" class="form-control" name = "f_name" placeholder="enter the name">
+			<input type="text" class="form-control" name = "l_name" id ="l_name" placeholder="enter the name">
 		</div>
 	</div>
 
 	<div class="form-group">
 		<label class="control-label col-md-3" for="">Search by Specialisation:</label>
 		<div class="col-md-5">
-			<select class="form-control" name = "f_sp" placeholder= "eg. Spec 1" >
-					<option value = "spec1">Spec 1</option>
-					<option value = "spec2">Spec 2</option>
-					<option value = "spec3">Spec 3</option>
-					<option value = "spec4">Spec 4</option>
+			<select class="form-control" name = "f_sp" id="f_sp" placeholder= "eg. Spec 1" >
+				<option value=""></option>
+				<?php include'../../Consultant/fields_spc.php';?>
 			</select><br>
 
 		</div>
 	</div>
 	<div class="row">
-		<input type="button" value="Search" onclick="get_cnslt()">
+		<input type="button" value="Search" onclick="get_cnslt_table()">
 	</div>
 	<br><br>
 	<div class="row">
 		<div class="col-md-5">
-			<table id="source" width="100%">
+			<table id="source_table" width="100%">
 				<tr>
-					<th width="10%"></th>
 					<th width="30%">Cnslt ID</th>
 					<th width="60%">Cnslt Name</th>
+					<th width="10%"></th>
 				</tr>
 			</table>
 		</div>
 		<div class="col-md-1">
 			<br><br>
-			<input type="button" value="Add" onclick="add()">
-			<input type="button" value="Remove" onclick="remove()">
 		</div>
 		<div class="col-md-5">
-			<table id="dest" width="100%">
+			<table id="dest_table" width="100%">
 				<tr>
 					<th width="10%"></th>
-					<th width="50%">Cnslt Name</th>
-					<th width="40%">Role</th>
+					<th width = "20%">Id</th>
+					<th width="40%">Cnslt Name</th>
+					<th width="30%">Role</th>
 				</tr>
 			</table>
 		</div>
 	</div>
 </div>
 
-<div id ="backgroundData" class="toshow" hidden>
+<div id ="backgroundData" hidden>
 	<div class="row">
 		<div class="form-group"><br>
 			<label for="comment">Background Data</label><br>
@@ -289,7 +287,7 @@
 	</div>
 </div>
 
-<div id ="termsOfReference" class="toshow" hidden>
+<div id ="termsOfReference" hidden>
 	<div class="row">
 		<div class="form-group">
 		  	<label for="comment"><br>Terms of reference</label>
@@ -300,7 +298,7 @@
 	</div>
 </div>
 
-<div id="DistributionList" class="toshow" hidden>
+<div id="DistributionList" hidden>
 	<div class="form-group">
 	  	<label for="comment"><br>Distribution List</label>
 	</div>

@@ -92,19 +92,19 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			<div class="row">
 				<div class="col-md-2">Consultant Type: </div>
 				<div class="col-md-3"><select name = "cnslt_type" id="con_type" readonly>
-								<option value = ""></option>
-								<option value = "SP">Specialist</option>
-								<option value = "EX">Expert</option>
-								<option value = "CN">Consultant</option>
-							</select></div>
+										<option value = "Specialist">Specialist</option>
+										<option value = "Expert">Expert</option>
+										<option value = "Consultant">Consultant</option>
+									</select>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-2">Consultant Status: </div>
 				<div class="col-md-3"><select name = "cnslt_status" id="con_stat" readonly>
-									<option value = "">Undefined</option>
-									<option value = "A">Active</option>
-									<option value = "I">Inactive</option>
-								</select></div>
+										<option value = "New">New</option>
+										<option value = "Active">Active</option>
+										<option value = "Inactive">Inactive</option>
+									</select></div>
 			</div>
 			<div class="row">
 				<div class="col-md-2">Payment Status:</div>

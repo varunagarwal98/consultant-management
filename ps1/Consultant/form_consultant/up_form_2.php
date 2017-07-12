@@ -2,12 +2,12 @@
 
 $cnslt_id = $_SESSION['cnslt_id'];
 
-if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
+if(isset($_POST['upload2']) && $_FILES['userfile2']['size'] > 0)
 {
-	$fileName = $_FILES['userfile']['name'];
-	$tmpName  = $_FILES['userfile']['tmp_name'];
-	$fileSize = $_FILES['userfile']['size'];
-	$fileType = $_FILES['userfile']['type'];
+	$fileName = $_FILES['userfile2']['name'];
+	$tmpName  = $_FILES['userfile2']['tmp_name'];
+	$fileSize = $_FILES['userfile2']['size'];
+	$fileType = $_FILES['userfile2']['type'];
 
 	$fp      = fopen($tmpName, 'r');
 	$content = fread($fp, filesize($tmpName));
@@ -19,7 +19,7 @@ if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 	    $fileName = addslashes($fileName);
 	}
 
-	$query = "UPDATE cnslt_bnk SET file_name = '$fileName', form_1a = '$content', file_type = '$fileType', file_size = $fileSize where cnslt_id = $cnslt_id";
+	$query = "UPDATE cnslt_bnk SET name2 = '$fileName', file2 = '$content', type2 = '$fileType', size2 = $fileSize where cnslt_id = $cnslt_id";
 
 	//echo $query;
 	mysqli_query($conn, $query) or die('Error, query failed');

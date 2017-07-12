@@ -22,6 +22,10 @@ $com = mysqli_insert_id($conn);
 for ($i = 0; $i < count($cnslt_id); $i++)
 {
 	$cnslt = mysqli_real_escape_string($conn,trim($cnslt_id[$i]));
+
+	$up = "update cnslt_bnk set pay_stat = 'Pay' where cnslt_id = $cnslt";
+	mysqli_query($conn, $up);
+
 	$r = mysqli_real_escape_string($conn,trim($role[$i]));
 
 	if (!$stmt->execute())

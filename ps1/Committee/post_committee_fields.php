@@ -16,4 +16,7 @@ $com_stat = trim($_POST['com_stat']);
 $back_data = trim($_POST['back_data']);
 $terms_ref = trim($_POST['terms_ref']);
 $proc_status = trim($_POST['proc_stat']);
+$cnslt_id = $_POST['id'];
+$role = $_POST['role'];
+
 ?>

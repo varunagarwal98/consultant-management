@@ -2,6 +2,23 @@
 
 $cnslt_id = $_SESSION['cnslt_id'];
 
+$query = "select name2 from cnslt_bnk where cnslt_id = $cnslt_id and size2 >0";
+
+if ($result = mysqli_query($conn, $query))
+	if(mysqli_num_rows($result) > 0)
+	{
+		$query = "SELECT name2, type2, size2, file2 FROM cnslt_bnk WHERE cnslt_id = $cnslt_id";
+
+		$result = mysqli_query($conn, $query) or die('Error, query failed');
+		list($name, $type, $size, $content) = mysqli_fetch_array($result);
+
+		header("Content-length: $size");
+		header("Content-type: $type");
+		header("Content-Disposition: attachment; filename=$name");
+		echo $content;
+		exit;
+	}
+
 require_once __DIR__ . '../../../mPDF/vendor/autoload.php';
 
 $sql = "select * from cnslt_bnk where cnslt_id = $cnslt_id";

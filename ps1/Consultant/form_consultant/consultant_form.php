@@ -61,7 +61,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 				<h2>Consultant Form 1A</h2>
 			</div>
 			<div class="row">
-				Consultant ID *: <input type="number" name="cnslt_id" id="cnslt_id"> <input type="button" value="Go" onclick="go()">  <input type="button" value="Download Form 1A" onclick="window.location.href='down_form_1a.php'" id="download" disabled>
+				Consultant ID *: <input type="number" name="cnslt_id" id="cnslt_id"> <input type="button" value="Go" onclick="go()">  <input type="button" value="Download Form 1A" onclick="window.location.href='down_form_1a.php'" id="download" disabled><input type="button" value="Download Form II" onclick="window.location.href='down_form_2.php'" id="download2" disabled>
 			</div>
 			<div class="row"><br></div>
 			<div class="row">
@@ -69,6 +69,14 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 				<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
 				<input name="userfile" type="file" id="userfile" disabled>
 				<input name="upload" type="submit" id="upload" value="Upload Form 1A" disabled>
+				</form>
+			</div>
+			<br>
+			<div class="row">
+				<form id="data2" method="post" enctype="multipart/form-data" action="up_form_2.php">
+				<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+				<input name="userfile2" type="file" id="userfile2" disabled>
+				<input name="upload2" type="submit" id="upload2" value="Upload Form II" disabled>
 				</form>
 			</div>
 			<div class="row">

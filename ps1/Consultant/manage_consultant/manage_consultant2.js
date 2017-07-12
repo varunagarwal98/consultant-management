@@ -97,6 +97,11 @@ function bigger_form(cnslt_id)
         if (xmlhttp3.readyState == 4 && xmlhttp3.status == 200) 
         {
         	var row = JSON.parse(xmlhttp3.responseText);
+        
+        	document.getElementsByName("cnslt_type")[0].disabled = false;
+			document.getElementsByName("cnslt_type")[1].disabled = true;
+			document.getElementsByName("cnslt_status")[0].disabled = false;
+			document.getElementsByName("cnslt_status")[1].disabled = true;
 
         	document.getElementsByName("coord_id")[0].value = row['coord_id'];
 			document.getElementsByName("f_name")[0].value = row['f_name'];
@@ -117,9 +122,11 @@ function bigger_form(cnslt_id)
 			document.getElementsByName("aadhaar_no")[0].value = row['aadhaar_no'];
 			document.getElementsByName("dob")[0].value = row['dob'];
 			document.getElementsByName("cnslt_type")[0].value = row['cnslt_type'];
+			
 			document.getElementsByName("pr_assgn")[0].value = row['assgn'];
 			document.getElementsByName("pay_stat")[0].value = row['pay_stat'];
-			document.getElementsByName("cnslt_stat")[0].value = row['cnslt_stat'];
+			document.getElementsByName("cnslt_status")[0].value = row['cnslt_stat'];
+			
 			document.getElementsByName("category")[0].value = row['category'];
 			document.getElementsByName("degree")[0].value = row['degree'];
 			document.getElementsByName("discipline")[0].value = row['discipline'];

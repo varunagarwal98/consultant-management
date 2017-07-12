@@ -115,9 +115,9 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			<div class="col-md-4">
 
 				<select class="form-control" name = "com_stat">
-					<option value = "">New</option>
-					<option value = "AC">Active</option>
-					<option value = "IN">Inactive</option>
+					<option value = "New">New</option>
+					<option value = "Active">Active</option>
+					<option value = "Inactive">Inactive</option>
 				</select><br>
 
 			</div>
@@ -128,13 +128,13 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 
 				<select class="form-control" name = "com_proc_status">
 					<option value=""></option>
-					<option value = "SD">Saved As Draft</option>
-					<option value = "PR">Propsed</option>
-					<option value = "RH">Rejected by HOD</option>
-					<option value = "RG">Registered</option>
-					<option value = "SA">Processed by Admin</option>
-					<option value = "">New</option>
-					<option value = "AB">Abolished</option>
+					<option value = "Saved as Draft">Saved As Draft</option>
+					<option value = "Proposed">Propsed</option>
+					<option value = "Rejected by HOD">Rejected by HOD</option>
+					<option value = "Registered by Admin">Registered</option>
+					<option value = "Processed by Admin">Processed by Admin</option>
+					<option value = "New">New</option>
+					<option value = "Abolished">Abolished</option>
 					<option value = "PA">Propose to Abolished</option>
 				</select><br>
 
