@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
@@ -11,7 +11,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 	<meta charset = "utf-8">
 	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
 	<link rel = "stylesheet" href = "create_committee.css">
-	
+
 	<script src = "create_committee.js"></script>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,17 +21,30 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script> 
-  	$(document).ready(function(){
-	   var $form = $('form');
-	   $form.submit(function(){
-	      $.post($(this).attr('action'), $(this).serialize(), function(response){
-	      },'json');
-	      alert("Committee Created");
-	      return false;
-	   });
+	<!-- <script >
+		$('#source_table tbody tr td input.checkbox:not(:checked)').on('change', function (e) {
+     	var row = $(this).closest('tr').html();
+     	$('#dest_table tbody').append('<tr>'+row+'</tr>');
 	});
 	</script>
+	<script>
+		$('button').on('click', function(){
+    	$('*').removeAttr('style');
+    	$('#source_table tbody tr td input.checkbox:not(:checked)').parent().css('border','red 1px dashed');
+	});
+	</script> -->
+<script>
+	$(document).ready(function(){
+	 var $form = $('form');
+	 $form.submit(function(){
+			$.post($(this).attr('action'), $(this).serialize(), function(response){
+			},'json');
+			alert("Committee Created");
+			return false;
+	 });
+});
+</script>
+
 </head>
 
 <body>
@@ -70,7 +83,7 @@ if (!isset($_SESSION['coord_id']) || $_SESSION['coord_id'] == '')
 			<?php include '../committee_fields.php';?>
 			<br><br>
 			<div class="row">
-				<input type="submit" value="Submit">
+				<input type="submit" value="Submit" >
 			</div>
 		</form>
 	</div>
